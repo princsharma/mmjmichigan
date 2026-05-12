@@ -29,7 +29,8 @@ export type IconName =
   | "arrow-left"
   | "chevron-down"
   | "pin"
-  | "leaf";
+  | "leaf"
+  | "mail";
 
 type IconProps = SVGProps<SVGSVGElement> & {
   name: IconName;
@@ -115,6 +116,9 @@ const PATHS: Record<IconName, React.ReactNode> = {
   ),
   leaf: (
     <path d="M5 21c0-9 6-15 15-15 0 9-6 15-15 15zm0 0l5-5" />
+  ),
+  mail: (
+    <path d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
   ),
 };
 

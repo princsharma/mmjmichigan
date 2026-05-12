@@ -23,7 +23,7 @@ export const SITE = {
   locale: "en_US",
   state: "MI",
   country: "US",
-  email: "support@medicalmarijuanascardmichigan.com",
+  email: "contact@medicalmarijuanacardmichigan.com",
   phone: "+1-800-000-0000",
   ogImage: "/opengraph-image.png",
   twitterImage: "/twitter-image.png",

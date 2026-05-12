@@ -159,28 +159,43 @@
     padding: 70px 5%;
   }
   .stage {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1.2rem;
     margin-top: 2.5rem;
-  }
-  .arrowPrev {
-    grid-row: 2;
-    justify-self: center;
-    margin-right: 60px;
-  }
-  .arrowNext {
-    grid-row: 2;
-    justify-self: center;
-    margin-left: 60px;
   }
   .card {
     grid-row: 1;
-    padding: 2rem 1.6rem;
+    grid-column: 1 / -1;
+    padding: 2rem 1.5rem;
     min-height: auto;
+    width: 100%;
+  }
+  .arrowPrev {
+    grid-row: 2;
+    grid-column: 1;
+    justify-self: start;
+  }
+  .arrowNext {
+    grid-row: 2;
+    grid-column: 2;
+    justify-self: end;
   }
   .quoteMark {
     font-size: 4rem;
     top: 0.6rem;
-    right: 1rem;
+    right: 1.2rem;
+  }
+  .text {
+    font-size: clamp(0.95rem, 4vw, 1.1rem);
+  }
+}
+
+@media (max-width: 460px) {
+  .card {
+    padding: 1.8rem 1.3rem;
+  }
+  .text {
+    font-size: 0.98rem;
   }
 }
