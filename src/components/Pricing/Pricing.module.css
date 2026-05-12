@@ -1,0 +1,269 @@
+.section {
+  background: var(--grad-dark);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+  padding: 100px 5%;
+}
+
+.deco {
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+.wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.6rem;
+  margin-top: 3rem;
+  align-items: stretch;
+}
+
+.card {
+  border-radius: 28px;
+  padding: 2.2rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.35s, background 0.35s, box-shadow 0.35s,
+    border-color 0.35s;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:not(.popular):hover {
+  background: rgba(255, 255, 255, 0.07);
+  transform: translateY(-6px);
+  border-color: rgba(82, 183, 136, 0.35);
+}
+
+.popular {
+  background: var(--white);
+  border-color: transparent;
+  box-shadow: 0 30px 80px rgba(82, 183, 136, 0.22);
+  transform: translateY(-8px);
+}
+
+.popular:hover {
+  transform: translateY(-12px);
+}
+
+.popular::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--grad-shimmer);
+  background-size: 200%;
+  animation: shimmer 3s linear infinite;
+}
+
+.popBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--grad-primary);
+  color: var(--white);
+  padding: 5px 14px;
+  border-radius: 50px;
+  font-size: clamp(0.66rem, 1vw, 0.72rem);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 1.4rem;
+  align-self: flex-start;
+}
+
+.icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(
+    135deg,
+    rgba(82, 183, 136, 0.15),
+    rgba(149, 213, 178, 0.1)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--g4);
+  margin-bottom: 1.2rem;
+}
+
+.popular .icon {
+  background: linear-gradient(
+    135deg,
+    rgba(82, 183, 136, 0.12),
+    rgba(149, 213, 178, 0.06)
+  );
+}
+
+.title {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: clamp(1.1rem, 1.7vw, 1.3rem);
+  color: var(--white);
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+}
+
+.popular .title {
+  color: var(--g1);
+}
+
+.subtitle {
+  font-size: clamp(0.78rem, 1.1vw, 0.84rem);
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 1.4rem;
+}
+
+.popular .subtitle {
+  color: var(--muted);
+}
+
+.amt {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: clamp(2.6rem, 5vw, 3.5rem);
+  color: var(--white);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.popular .amt {
+  color: var(--g1);
+}
+
+.amt sup {
+  font-size: 1.3rem;
+  vertical-align: top;
+  margin-top: 0.8rem;
+  display: inline-block;
+}
+
+.featList {
+  margin: 1.6rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  flex-grow: 1;
+}
+
+.featItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: clamp(0.82rem, 1.2vw, 0.87rem);
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.55;
+}
+
+.popular .featItem {
+  color: var(--g2);
+}
+
+.featCheck {
+  width: 20px;
+  height: 20px;
+  background: rgba(82, 183, 136, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--g4);
+  margin-top: 1px;
+}
+
+.btnPrimary {
+  width: 100%;
+  padding: 14px;
+  background: var(--grad-primary);
+  color: var(--white);
+  border: none;
+  border-radius: 14px;
+  font-family: inherit;
+  font-size: clamp(0.86rem, 1.3vw, 0.95rem);
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 6px 20px rgba(82, 183, 136, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(82, 183, 136, 0.4);
+}
+
+.btnOutline {
+  width: 100%;
+  padding: 14px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.85);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 14px;
+  font-family: inherit;
+  font-size: clamp(0.86rem, 1.3vw, 0.95rem);
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.3s, color 0.3s, background 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btnOutline:hover {
+  border-color: var(--g4);
+  color: var(--white);
+  background: rgba(82, 183, 136, 0.08);
+}
+
+.note {
+  margin: 1.8rem auto 0;
+  text-align: center;
+  font-size: clamp(0.74rem, 1.1vw, 0.8rem);
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 1.7;
+  max-width: 760px;
+}
+
+@media (max-width: 960px) {
+  .section {
+    padding: 70px 5%;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .card {
+    padding: 1.8rem 1.6rem;
+    border-radius: 22px;
+  }
+  .popular {
+    transform: none;
+  }
+  .popular:hover {
+    transform: translateY(-4px);
+  }
+  .featList {
+    margin: 1.3rem 0;
+    gap: 0.7rem;
+  }
+}

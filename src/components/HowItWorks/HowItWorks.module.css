@@ -1,0 +1,251 @@
+.section {
+  background: var(--grad-dark);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+  padding: 100px 5%;
+}
+
+.deco {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.04;
+  pointer-events: none;
+}
+
+.headerWrap {
+  max-width: 1160px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.timelineWrap {
+  max-width: 1160px;
+  margin: 4rem auto 0;
+  position: relative;
+  padding: 0;
+}
+
+.line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: linear-gradient(
+    180deg,
+    rgba(82, 183, 136, 0) 0%,
+    var(--g4) 12%,
+    var(--gold) 50%,
+    var(--g4) 88%,
+    rgba(82, 183, 136, 0) 100%
+  );
+  background-size: 100% 200%;
+  animation: shimmer 6s linear infinite;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+
+.cardSlot {
+  min-width: 0;
+}
+
+.right .cardSlot {
+  grid-column: 2 / 3;
+}
+
+.left .cardSlot {
+  grid-column: 1 / 2;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1.5px solid rgba(82, 183, 136, 0.18);
+  border-radius: 22px;
+  padding: 1.8rem;
+  transition: transform 0.3s, background 0.3s, border-color 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.07);
+  border-color: var(--g4);
+}
+
+.cardHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.left .cardHead {
+  flex-direction: row-reverse;
+}
+
+.stepNum {
+  font-size: clamp(0.7rem, 1vw, 0.74rem);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: rgba(233, 196, 106, 0.08);
+  border: 1px solid rgba(233, 196, 106, 0.18);
+  padding: 5px 12px;
+  border-radius: 50px;
+}
+
+.bubble {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: var(--grad-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  box-shadow: 0 6px 22px rgba(82, 183, 136, 0.4);
+  flex-shrink: 0;
+}
+
+.card h3 {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+  color: var(--white);
+  margin-bottom: 0.6rem;
+  font-weight: 700;
+}
+
+.card p {
+  font-size: clamp(0.82rem, 1.2vw, 0.88rem);
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.7;
+}
+
+.dot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--g1);
+  border: 2px solid var(--g4);
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.dotInner {
+  width: 8px;
+  height: 8px;
+  background: var(--g4);
+  border-radius: 50%;
+  animation: pulse 2.4s infinite;
+}
+
+.cta {
+  text-align: center;
+  margin-top: 3.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--grad-primary);
+  color: var(--white);
+  font-weight: 700;
+  padding: 17px 38px;
+  border-radius: 60px;
+  font-size: clamp(0.92rem, 1.4vw, 1rem);
+  box-shadow: var(--shadow-cta);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-cta-hover);
+}
+
+@media (max-width: 960px) {
+  .section {
+    padding: 70px 5%;
+  }
+  .timelineWrap {
+    margin-top: 3rem;
+  }
+  .line {
+    left: 20px;
+    transform: none;
+  }
+  .row {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding-left: 50px;
+  }
+  .right .cardSlot,
+  .left .cardSlot {
+    grid-column: 1 / 2;
+  }
+  .left .cardHead {
+    flex-direction: row;
+  }
+  .dot {
+    left: 20px;
+    top: 32px;
+    transform: translate(-50%, 0);
+  }
+  .btn {
+    padding: 14px 28px;
+  }
+}
+
+@media (max-width: 460px) {
+  .timeline {
+    gap: 1.8rem;
+  }
+  .card {
+    padding: 1.4rem;
+  }
+  .bubble {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+  }
+  .bubble svg {
+    width: 22px;
+    height: 22px;
+  }
+  .cta {
+    margin-top: 2.5rem;
+  }
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

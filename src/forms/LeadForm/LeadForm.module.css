@@ -1,0 +1,205 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 28px;
+  padding: 2.5rem;
+  box-shadow: var(--shadow-elevated);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--grad-shimmer);
+  background-size: 200%;
+  animation: shimmer 3s linear infinite;
+  z-index: 1;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1.8rem;
+}
+
+.headerIcon {
+  width: 46px;
+  height: 46px;
+  background: var(--grad-primary);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  flex-shrink: 0;
+}
+
+.cardTitle {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: clamp(1.15rem, 1.8vw, 1.35rem);
+  color: var(--g1);
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+.cardSubtitle {
+  font-size: clamp(0.74rem, 1.1vw, 0.8rem);
+  color: var(--muted);
+}
+
+.field {
+  margin-bottom: 0.9rem;
+}
+
+.field label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--g3);
+  margin-bottom: 5px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.field input {
+  width: 100%;
+  padding: 13px 16px;
+  border: 1.5px solid #e8f0ec;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: clamp(0.84rem, 1.2vw, 0.9rem);
+  color: var(--g1);
+  background: #fafdf9;
+  transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+.field input:focus {
+  border-color: var(--g4);
+  background: var(--white);
+  box-shadow: 0 0 0 4px rgba(82, 183, 136, 0.1);
+}
+
+.field input[aria-invalid="true"] {
+  border-color: #d44a4a;
+  background: #fff5f5;
+}
+
+.checkboxRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  margin-bottom: 0.7rem;
+}
+
+.checkboxRow input {
+  margin-top: 3px;
+  accent-color: var(--g4);
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.checkboxRow label {
+  font-size: clamp(0.74rem, 1.1vw, 0.78rem);
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.checkboxRow a {
+  color: var(--g4);
+  text-decoration: underline;
+}
+
+.error {
+  display: block;
+  font-size: 0.75rem;
+  color: #d44a4a;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 15px;
+  background: var(--grad-primary);
+  color: var(--white);
+  border: none;
+  border-radius: 14px;
+  font-family: inherit;
+  font-size: clamp(0.92rem, 1.4vw, 0.98rem);
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
+  margin-top: 0.4rem;
+  box-shadow: 0 6px 24px rgba(82, 183, 136, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.submitBtn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 32px rgba(82, 183, 136, 0.45);
+}
+
+.submitBtn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.success {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 1.25rem;
+  border-radius: 14px;
+  background: rgba(82, 183, 136, 0.08);
+  border: 1px solid rgba(82, 183, 136, 0.25);
+  color: var(--g1);
+}
+
+.success svg {
+  color: var(--g4);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.success strong {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+.success p {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+@media (max-width: 540px) {
+  .card {
+    padding: 1.8rem 1.4rem 1.6rem;
+    border-radius: 22px;
+  }
+  .cardTitle {
+    font-size: 1.15rem;
+  }
+  .field input {
+    padding: 12px 14px;
+  }
+  .submitBtn {
+    padding: 13px;
+  }
+}
