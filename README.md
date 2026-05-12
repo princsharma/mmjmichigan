@@ -47,8 +47,7 @@ JSON-LD is generated from the same arrays — never duplicate strings.
 
 | Section | Illinois | Michigan |
 | --- | --- | --- |
-| **Hero** | Form-in-hero (right column) | Split-image: headline + CTA left, SVG doctor/leaf illustration right. **No form in hero.** |
-| **Get Started** | (no dedicated section) | New full-width section directly below hero with form + benefits teaser |
+| **Hero** | Form-in-hero (right column) | Form-in-hero (right column) — same pattern, Michigan copy + badges |
 | **Stats bar** | Dark band immediately below hero | Floating tiles on cream between Why-Us and How-It-Works |
 | **How It Works** | Horizontal 4-column row | **Vertical timeline** with alternating left/right cards |
 | **Doctors** | Side-by-side text + dashboard | **Full-width banner** with 4-avatar row + centered quote |

@@ -81,7 +81,7 @@ export default function HowItWorks() {
       </div>
 
       <div className={styles.cta}>
-        <Link href="#get-started" className={styles.btn}>
+        <Link href="#hero-form" className={styles.btn}>
           Consult With a Michigan MMJ Doctor
           <Icon name="arrow-right" size={18} strokeWidth={2.5} />
         </Link>

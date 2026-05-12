@@ -34,8 +34,8 @@
   margin: 0 auto;
   width: 100%;
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 4rem;
+  grid-template-columns: 1fr 440px;
+  gap: 5rem;
   align-items: center;
   position: relative;
   z-index: 2;
@@ -183,56 +183,22 @@
 .visual {
   position: relative;
   animation: fadeUp 0.8s 0.2s ease both;
-  padding: 1rem;
-}
-
-.illustration {
-  position: relative;
-  width: 100%;
-  max-width: 440px;
-  margin: 0 auto;
-  border-radius: 28px;
-  background: radial-gradient(
-    circle at 30% 30%,
-    rgba(82, 183, 136, 0.18),
-    rgba(13, 40, 24, 0.6) 70%
-  );
-  border: 1px solid rgba(82, 183, 136, 0.18);
-  box-shadow: var(--shadow-elevated);
-  padding: 1.5rem;
-  overflow: hidden;
-}
-
-.illustration::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: var(--grad-shimmer);
-  background-size: 200%;
-  animation: shimmer 3s linear infinite;
-}
-
-.illoSvg {
-  width: 100%;
-  height: auto;
-  display: block;
+  scroll-margin-top: 90px;
 }
 
 .floatingBadge {
   position: absolute;
-  bottom: -10px;
-  right: -10px;
+  bottom: -16px;
+  right: -16px;
   background: var(--white);
   border-radius: 16px;
   padding: 12px 16px;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
   display: flex;
   align-items: center;
   gap: 10px;
   font-size: 0.82rem;
+  font-weight: 600;
   color: var(--g1);
   border: 1px solid rgba(82, 183, 136, 0.15);
   animation: bob 3s ease-in-out infinite;
@@ -245,25 +211,27 @@
   flex-shrink: 0;
 }
 
-.floatingBadge2 {
+.floatingBadgeGold {
   position: absolute;
-  top: 16px;
-  left: -16px;
+  top: -16px;
+  left: -20px;
   background: var(--grad-gold);
   border-radius: 14px;
   padding: 10px 14px;
   box-shadow: 0 8px 28px rgba(233, 196, 106, 0.4);
   display: flex;
   align-items: center;
-  gap: 10px;
-  color: var(--g1);
+  gap: 8px;
+  font-size: clamp(0.7rem, 1.1vw, 0.78rem);
+  font-weight: 700;
+  color: var(--white);
   animation: bob 4s 1s ease-in-out infinite;
-  z-index: 3;
+  z-index: 4;
   white-space: nowrap;
 }
 
-.floatingBadge2 svg {
-  color: var(--g1);
+.floatingBadgeGold svg {
+  color: var(--white);
   flex-shrink: 0;
 }
 
@@ -294,7 +262,6 @@
     max-width: 440px;
     margin: 0 auto;
     width: 100%;
-    padding: 0.5rem;
   }
   .trustRow {
     gap: 0.6rem;
@@ -329,23 +296,28 @@
     margin-bottom: 1.1rem;
   }
   .floatingBadge {
-    bottom: -8px;
+    bottom: -12px;
     right: 8px;
-    padding: 9px 12px;
+    padding: 10px 12px;
+    font-size: 0.76rem;
   }
   .floatingBadge svg {
     width: 18px;
     height: 18px;
   }
-  .floatingBadge2 {
-    top: 8px;
-    left: 4px;
+  .floatingBadgeGold {
+    top: -14px;
+    left: 12px;
     padding: 8px 12px;
   }
+  .floatingBadgeGold svg {
+    width: 14px;
+    height: 14px;
+  }
   .fbTitle {
-    font-size: 0.76rem;
+    font-size: 0.78rem;
   }
   .fbSub {
-    font-size: 0.66rem;
+    font-size: 0.68rem;
   }
 }

@@ -45,7 +45,7 @@ export default function BottomCTA() {
             </div>
           ))}
         </div>
-        <Link href="#get-started" className={styles.btn}>
+        <Link href="#hero-form" className={styles.btn}>
           <Icon name="calendar" size={20} strokeWidth={2.5} />
           Book Your Appointment Now
         </Link>

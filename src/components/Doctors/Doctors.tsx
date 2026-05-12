@@ -85,7 +85,7 @@ export default function Doctors() {
 
         <Reveal>
           <div className={styles.ctaRow}>
-            <Link href="#get-started" className={styles.btn}>
+            <Link href="#hero-form" className={styles.btn}>
               Start Your Journey Today
               <Icon name="arrow-right" size={18} strokeWidth={2.5} />
             </Link>

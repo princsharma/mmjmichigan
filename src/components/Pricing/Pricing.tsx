@@ -68,7 +68,7 @@ export default function Pricing() {
                   ))}
                 </ul>
                 <Link
-                  href="#get-started"
+                  href="#hero-form"
                   className={
                     plan.popular ? styles.btnPrimary : styles.btnOutline
                   }

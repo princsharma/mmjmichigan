@@ -42,7 +42,7 @@ export default function ConnectDoctor() {
 
         <Reveal>
           <div className={styles.ctaRow}>
-            <Link href="#get-started" className={styles.btnPrimary}>
+            <Link href="#hero-form" className={styles.btnPrimary}>
               Schedule Consultation
               <Icon name="arrow-right" size={18} strokeWidth={2.5} />
             </Link>

@@ -95,7 +95,7 @@ export default function Header() {
             </li>
           ))}
           <li>
-            <Link href="#get-started" className={styles.navCta}>
+            <Link href="#hero-form" className={styles.navCta}>
               Get Started
             </Link>
           </li>
@@ -135,7 +135,7 @@ export default function Header() {
             </li>
           ))}
           <li>
-            <Link href="#get-started" className={styles.navCta} onClick={close}>
+            <Link href="#hero-form" className={styles.navCta} onClick={close}>
               Get Started
             </Link>
           </li>

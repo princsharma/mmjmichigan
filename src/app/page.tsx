@@ -1,6 +1,5 @@
 import Header from "@/components/Header/Header";
 import Hero from "@/components/Hero/Hero";
-import GetStarted from "@/components/GetStarted/GetStarted";
 import WhyUs from "@/components/WhyUs/WhyUs";
 import StatsBar from "@/components/StatsBar/StatsBar";
 import HowItWorks from "@/components/HowItWorks/HowItWorks";
@@ -27,7 +26,6 @@ export default function HomePage() {
       <Header />
       <main>
         <Hero />
-        <GetStarted />
         <WhyUs />
         <StatsBar />
         <HowItWorks />
