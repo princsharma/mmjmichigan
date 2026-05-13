@@ -4,11 +4,13 @@ export const SITE = {
   domain: "medicalmarijuanascardmichigan.com",
   url: "https://medicalmarijuanascardmichigan.com",
   title:
-    "Michigan Medical Marijuana Card | Online Evaluation Today",
+    "Apply Your Medical Marijuana Card Michigan | Easy Online Process",
   description:
-    "Get evaluated by a Michigan-licensed MMJ physician through our secure telehealth platform. Fully compliant with the Michigan Medical Marihuana Program administered by the Cannabis Regulatory Agency.",
+    "Apply for a Michigan medical marijuana card online with trusted doctors, quick evaluations, and a simple approval process today.",
   keywords: [
+    "Medical Marijuana Card Michigan",
     "Michigan medical marijuana card",
+    "apply medical marijuana card Michigan",
     "MI MMJ card",
     "medical cannabis Michigan",
     "Michigan MMJ doctor",
