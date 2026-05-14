@@ -10,7 +10,7 @@ export function organizationSchema() {
     name: SITE.name,
     alternateName: SITE.shortName,
     url: SITE.url,
-    logo: `${SITE.url}/logo.png`,
+    logo: `${SITE.url}/michigan-logo.webp`,
     image: `${SITE.url}${SITE.ogImage}`,
     description: SITE.description,
     medicalSpecialty: "MedicalCannabis",

@@ -94,6 +94,23 @@ export const metadata: Metadata = {
     google: "_DuLDvNY6uSUSTdwk4bx1yw-CX4BGn4K-HFfZf76pXk",
     yandex: "",
   },
+  icons: {
+    icon: [
+      {
+        url: "/michigan-favicon.webp",
+        type: "image/webp",
+        sizes: "512x512",
+      },
+    ],
+    apple: [
+      {
+        url: "/michigan-favicon.webp",
+        type: "image/webp",
+        sizes: "512x512",
+      },
+    ],
+    shortcut: [{ url: "/michigan-favicon.webp", type: "image/webp" }],
+  },
 };
 
 export default function RootLayout({

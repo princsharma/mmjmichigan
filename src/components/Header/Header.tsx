@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import { NAV_LINKS, SITE } from "@/constants/site";
@@ -32,59 +33,14 @@ export default function Header() {
         aria-label={`${SITE.name} home`}
         onClick={close}
       >
-        <svg
-          className={styles.logoIcon}
-          viewBox="0 0 40 40"
-          fill="none"
-          aria-hidden="true"
-          focusable="false"
-        >
-          <circle
-            cx="20"
-            cy="20"
-            r="19"
-            fill="rgba(82,183,136,0.12)"
-            stroke="rgba(82,183,136,0.3)"
-            strokeWidth="1"
-          />
-          <path
-            d="M20 6C20 6 10 12 10 21C10 27.6 14.5 33 20 33C25.5 33 30 27.6 30 21C30 12 20 6 20 6Z"
-            fill="#52b788"
-            opacity="0.7"
-          />
-          <path
-            d="M20 10C20 10 14 15 14 21C14 24.8 16.7 28 20 28C23.3 28 26 24.8 26 21C26 15 20 10 20 10Z"
-            fill="#95d5b2"
-          />
-          <line
-            x1="20"
-            y1="16"
-            x2="20"
-            y2="31"
-            stroke="white"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-          />
-          <line
-            x1="20"
-            y1="22"
-            x2="17"
-            y2="19"
-            stroke="white"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-          />
-          <line
-            x1="20"
-            y1="26"
-            x2="23"
-            y2="23"
-            stroke="white"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-          />
-        </svg>
-        {SITE.shortName}
+        <Image
+          src="/michigan-logo.webp"
+          alt={SITE.name}
+          width={2039}
+          height={694}
+          priority
+          className={styles.logoImg}
+        />
       </Link>
 
       <nav aria-label="Primary" className={styles.desktopNav}>
