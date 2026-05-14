@@ -3,6 +3,7 @@ import { Outfit, Playfair_Display } from "next/font/google";
 import Script from "next/script";
 import { SITE } from "@/constants/site";
 import JsonLd from "@/components/JsonLd/JsonLd";
+import HashScrollFix from "@/components/HashScrollFix/HashScrollFix";
 import {
   organizationSchema,
   websiteSchema,
@@ -114,6 +115,7 @@ export default function RootLayout({
             title="Google Tag Manager"
           />
         </noscript>
+        <HashScrollFix />
         {children}
         <Script id="gtm-init" strategy="afterInteractive">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
