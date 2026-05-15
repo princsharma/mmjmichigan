@@ -61,6 +61,7 @@ export default function Testimonials() {
               </span>
               <div
                 className={styles.stars}
+                role="img"
                 aria-label={`Rated ${active.rating} out of 5 stars`}
               >
                 {"★".repeat(active.rating)}
@@ -95,15 +96,14 @@ export default function Testimonials() {
 
           <div
             className={styles.dots}
-            role="tablist"
+            role="group"
             aria-label="Choose testimonial"
           >
             {TESTIMONIALS.map((t, i) => (
               <button
                 key={t.name}
                 type="button"
-                role="tab"
-                aria-selected={i === index}
+                aria-current={i === index ? "true" : undefined}
                 aria-label={`Show testimonial from ${t.name}`}
                 className={`${styles.dot} ${
                   i === index ? styles.dotActive : ""

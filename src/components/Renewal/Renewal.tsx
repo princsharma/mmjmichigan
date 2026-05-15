@@ -23,16 +23,16 @@ export default function Renewal() {
         </Reveal>
         <ol className={styles.grid}>
           {RENEWAL_STEPS.map((step, idx) => (
-            <Reveal key={step.num} delay={idx * 0.1}>
-              <li className={styles.card}>
+            <li key={step.num} className={styles.cardWrap}>
+              <Reveal delay={idx * 0.1} className={styles.card}>
                 <div className={styles.numBadge}>{step.num}</div>
                 <div className={styles.icon}>
                   <Icon name={step.icon} size={20} strokeWidth={2.5} />
                 </div>
                 <h3>{step.title}</h3>
                 <p>{step.description}</p>
-              </li>
-            </Reveal>
+              </Reveal>
+            </li>
           ))}
         </ol>
       </div>

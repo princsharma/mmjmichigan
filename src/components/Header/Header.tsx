@@ -26,7 +26,7 @@ export default function Header() {
   }, [open]);
 
   return (
-    <header className={styles.nav} role="banner">
+    <header className={styles.nav}>
       <Link
         href="#top"
         className={styles.logo}

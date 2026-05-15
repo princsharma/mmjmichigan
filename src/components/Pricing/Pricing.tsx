@@ -51,7 +51,7 @@ export default function Pricing() {
                 <div className={styles.icon}>
                   <Icon name={plan.icon} size={24} strokeWidth={2.5} />
                 </div>
-                <div className={styles.title}>{plan.title}</div>
+                <h3 className={styles.title}>{plan.title}</h3>
                 <div className={styles.subtitle}>{plan.subtitle}</div>
                 <div className={styles.amt}>
                   <sup>$</sup>

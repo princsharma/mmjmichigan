@@ -43,7 +43,7 @@ export default function Conditions() {
                 <Icon name="shield-check" size={22} strokeWidth={2.5} />
               </div>
               <div>
-                <h4>Not sure if you qualify?</h4>
+                <h3>Not sure if you qualify?</h3>
                 <p>
                   Our Michigan-licensed physician reviews your medical history
                   during the consultation and confirms whether your condition

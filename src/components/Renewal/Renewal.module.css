@@ -15,6 +15,10 @@
   margin-top: 3rem;
 }
 
+.cardWrap {
+  display: contents;
+}
+
 .card {
   background: var(--cream);
   border-radius: 24px;

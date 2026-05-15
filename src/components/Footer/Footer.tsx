@@ -15,7 +15,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className={styles.footer} role="contentinfo">
+    <footer className={styles.footer}>
       <div className={styles.inner}>
         <div className={styles.brand}>
           <Link
