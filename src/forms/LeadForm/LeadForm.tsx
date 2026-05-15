@@ -207,7 +207,7 @@ export default function LeadForm() {
             />
             <label htmlFor="terms">
               I accept the{" "}
-              <a href="#" rel="nofollow">
+              <a href="#" rel="nofollow" title="Terms and conditions">
                 Terms and Conditions
               </a>{" "}
               *

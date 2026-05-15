@@ -37,9 +37,29 @@ export const SITE = {
 } as const;
 
 export const NAV_LINKS = [
-  { href: "#why-us", label: "Why Us" },
-  { href: "#how-it-works", label: "How It Works" },
-  { href: "#conditions", label: "Conditions" },
-  { href: "#pricing", label: "Pricing" },
-  { href: "#faq", label: "FAQ" },
+  {
+    href: "#why-us",
+    label: "Why Us",
+    title: "Why choose Michigan Medical Marijuana Card",
+  },
+  {
+    href: "#how-it-works",
+    label: "How It Works",
+    title: "Michigan medical marijuana card application process",
+  },
+  {
+    href: "#conditions",
+    label: "Conditions",
+    title: "Qualifying conditions for a Michigan MMJ card",
+  },
+  {
+    href: "#pricing",
+    label: "Pricing",
+    title: "Michigan medical marijuana card pricing",
+  },
+  {
+    href: "#faq",
+    label: "FAQ",
+    title: "Frequently asked questions about Michigan MMJ card",
+  },
 ] as const;

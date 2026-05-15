@@ -45,7 +45,11 @@ export default function BottomCTA() {
             </div>
           ))}
         </div>
-        <Link href="#hero-form" className={styles.btn}>
+        <Link
+          href="#hero-form"
+          className={styles.btn}
+          title="Book your Michigan medical marijuana card appointment"
+        >
           <Icon name="calendar" size={20} strokeWidth={2.5} />
           Book Your Appointment Now
         </Link>

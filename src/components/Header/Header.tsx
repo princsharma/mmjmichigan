@@ -31,11 +31,13 @@ export default function Header() {
         href="#top"
         className={styles.logo}
         aria-label={`${SITE.name} home`}
+        title={`${SITE.name} home`}
         onClick={close}
       >
         <Image
           src="/michigan-logo.webp"
-          alt={SITE.name}
+          alt={`${SITE.name} logo`}
+          title={SITE.name}
           width={2039}
           height={694}
           priority
@@ -47,11 +49,17 @@ export default function Header() {
         <ul className={styles.navLinks}>
           {NAV_LINKS.map((link) => (
             <li key={link.href}>
-              <Link href={link.href}>{link.label}</Link>
+              <Link href={link.href} title={link.title}>
+                {link.label}
+              </Link>
             </li>
           ))}
           <li>
-            <Link href="#hero-form" className={styles.navCta}>
+            <Link
+              href="#hero-form"
+              className={styles.navCta}
+              title="Start your Michigan medical marijuana card application"
+            >
               Get Started
             </Link>
           </li>
@@ -85,13 +93,18 @@ export default function Header() {
         <ul>
           {NAV_LINKS.map((link) => (
             <li key={link.href}>
-              <Link href={link.href} onClick={close}>
+              <Link href={link.href} title={link.title} onClick={close}>
                 {link.label}
               </Link>
             </li>
           ))}
           <li>
-            <Link href="#hero-form" className={styles.navCta} onClick={close}>
+            <Link
+              href="#hero-form"
+              className={styles.navCta}
+              title="Start your Michigan medical marijuana card application"
+              onClick={close}
+            >
               Get Started
             </Link>
           </li>

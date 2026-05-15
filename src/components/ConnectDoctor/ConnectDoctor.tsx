@@ -42,11 +42,19 @@ export default function ConnectDoctor() {
 
         <Reveal>
           <div className={styles.ctaRow}>
-            <Link href="#hero-form" className={styles.btnPrimary}>
+            <Link
+              href="#hero-form"
+              className={styles.btnPrimary}
+              title="Schedule a Michigan medical marijuana card consultation"
+            >
               Schedule Consultation
               <Icon name="arrow-right" size={18} strokeWidth={2.5} />
             </Link>
-            <Link href="#how-it-works" className={styles.btnOutline}>
+            <Link
+              href="#how-it-works"
+              className={styles.btnOutline}
+              title="Learn how the Michigan MMJ card process works"
+            >
               Learn More
             </Link>
           </div>

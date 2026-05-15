@@ -47,11 +47,19 @@ export default function Hero() {
             ))}
           </div>
           <div className={styles.ctaRow}>
-            <Link href="#hero-form" className={styles.btnHero}>
+            <Link
+              href="#hero-form"
+              className={styles.btnHero}
+              title="Start your Michigan medical marijuana card evaluation"
+            >
               <Icon name="calendar" size={20} strokeWidth={2.5} />
               Start My Evaluation Now
             </Link>
-            <Link href="#how-it-works" className={styles.btnGhost}>
+            <Link
+              href="#how-it-works"
+              className={styles.btnGhost}
+              title="See how the Michigan MMJ card process works"
+            >
               How it works
               <Icon name="chevron-down" size={16} strokeWidth={2.5} />
             </Link>

@@ -5,10 +5,10 @@ import { NAV_LINKS, SITE } from "@/constants/site";
 import styles from "./Footer.module.css";
 
 const LEGAL_LINKS = [
-  { href: "#", label: "Terms & Conditions" },
-  { href: "#", label: "Privacy Policy" },
-  { href: "#", label: "HIPAA Notice" },
-  { href: "#", label: "Sitemap" },
+  { href: "#", label: "Terms & Conditions", title: "Terms and conditions" },
+  { href: "#", label: "Privacy Policy", title: "Privacy policy" },
+  { href: "#", label: "HIPAA Notice", title: "HIPAA privacy notice" },
+  { href: "#", label: "Sitemap", title: "Site map" },
 ];
 
 export default function Footer() {
@@ -22,10 +22,12 @@ export default function Footer() {
             href="#top"
             className={styles.logo}
             aria-label={`${SITE.name} home`}
+            title={`${SITE.name} home`}
           >
             <Image
               src="/michigan-logo.webp"
-              alt={SITE.name}
+              alt={`${SITE.name} logo`}
+              title={SITE.name}
               width={2039}
               height={694}
               className={styles.logoImg}
@@ -40,6 +42,7 @@ export default function Footer() {
             href={`mailto:${SITE.email}`}
             className={styles.emailLink}
             aria-label={`Email ${SITE.email}`}
+            title={`Email ${SITE.name} support`}
           >
             <span className={styles.emailIcon}>
               <Icon name="mail" size={16} strokeWidth={2} />
@@ -53,11 +56,18 @@ export default function Footer() {
           <ul>
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
-                <Link href={link.href}>{link.label}</Link>
+                <Link href={link.href} title={link.title}>
+                  {link.label}
+                </Link>
               </li>
             ))}
             <li>
-              <Link href="#hero-form">Get Started</Link>
+              <Link
+                href="#hero-form"
+                title="Start your Michigan medical marijuana card application"
+              >
+                Get Started
+              </Link>
             </li>
           </ul>
         </nav>
@@ -67,7 +77,9 @@ export default function Footer() {
           <ul>
             {LEGAL_LINKS.map((link) => (
               <li key={link.label}>
-                <Link href={link.href}>{link.label}</Link>
+                <Link href={link.href} title={link.title}>
+                  {link.label}
+                </Link>
               </li>
             ))}
           </ul>

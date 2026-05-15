@@ -85,7 +85,11 @@ export default function Doctors() {
 
         <Reveal>
           <div className={styles.ctaRow}>
-            <Link href="#hero-form" className={styles.btn}>
+            <Link
+              href="#hero-form"
+              className={styles.btn}
+              title="Start your Michigan medical marijuana card journey"
+            >
               Start Your Journey Today
               <Icon name="arrow-right" size={18} strokeWidth={2.5} />
             </Link>

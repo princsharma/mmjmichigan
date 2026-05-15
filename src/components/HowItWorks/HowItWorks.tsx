@@ -81,7 +81,11 @@ export default function HowItWorks() {
       </div>
 
       <div className={styles.cta}>
-        <Link href="#hero-form" className={styles.btn}>
+        <Link
+          href="#hero-form"
+          className={styles.btn}
+          title="Consult with a Michigan MMJ doctor for your medical marijuana card"
+        >
           Consult With a Michigan MMJ Doctor
           <Icon name="arrow-right" size={18} strokeWidth={2.5} />
         </Link>

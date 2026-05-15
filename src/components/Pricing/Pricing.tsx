@@ -72,6 +72,7 @@ export default function Pricing() {
                   className={
                     plan.popular ? styles.btnPrimary : styles.btnOutline
                   }
+                  title={`Choose the ${plan.title} plan for your Michigan medical marijuana card`}
                 >
                   {plan.ctaLabel}
                   <Icon name="arrow-right" size={16} strokeWidth={2.5} />
