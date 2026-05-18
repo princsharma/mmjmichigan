@@ -27,6 +27,7 @@ export default function HashScrollFix() {
           "",
           window.location.pathname + window.location.search
         );
+        document.dispatchEvent(new CustomEvent("hashnav", { detail: href }));
         return;
       }
 
@@ -42,6 +43,7 @@ export default function HashScrollFix() {
         "",
         window.location.pathname + window.location.search + href
       );
+      document.dispatchEvent(new CustomEvent("hashnav", { detail: href }));
     };
 
     document.addEventListener("click", handler, true);

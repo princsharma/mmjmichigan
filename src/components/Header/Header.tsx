@@ -25,6 +25,12 @@ export default function Header() {
     };
   }, [open]);
 
+  useEffect(() => {
+    const onHashNav = () => setOpen(false);
+    document.addEventListener("hashnav", onHashNav);
+    return () => document.removeEventListener("hashnav", onHashNav);
+  }, []);
+
   return (
     <header className={styles.nav}>
       <Link
